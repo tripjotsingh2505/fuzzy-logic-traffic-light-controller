@@ -161,31 +161,31 @@ st.markdown("""
 """,unsafe_allow_html=True)
 
 # ---------- GRAPH FUNCTION ----------
-def plot_membership(var,title,figsize=(4,2.5)):
-    fig, ax = plt.subplots(figsize=figsize)
+def plot_membership(var,title):
+
+    fig, ax = plt.subplots(figsize=(6,3))  # controlled size
+
     for label in var.terms:
-        ax.plot(var.universe,var[label].mf,label=label)
-    ax.set_title(title,fontsize=14)
-    ax.tick_params(labelsize=12)
-    ax.legend(fontsize=12)
+        ax.plot(var.universe, var[label].mf, linewidth=2, label=label)
+
+    ax.set_title(title, fontsize=16)
+    ax.set_xlabel("Value", fontsize=12)
+    ax.set_ylabel("Membership", fontsize=12)
+
+    ax.legend()
     ax.grid(True)
+
     st.pyplot(fig)
 
 # ---------- GRAPHS ----------
 st.markdown('<div class="section-title">Fuzzy Membership Functions</div>', unsafe_allow_html=True)
 
-# Columns layout for aligned graphs
-col1,col2,col3 = st.columns(3)
-with col1:
-    plot_membership(traffic_density,"Traffic Density")
-with col2:
-    plot_membership(waiting_time,"Waiting Time")
-with col3:
-    plot_membership(green_light_duration,"Green Duration")
+plot_membership(traffic_density,"Traffic Density Membership")
 
-# Row 2: Red and Yellow aligned
-col1,col2 = st.columns(2)
-with col1:
-    plot_membership(red_light_duration,"Red Duration")
-with col2:
-    plot_membership(yellow_light_duration,"Yellow Duration",figsize=(3.5,2.5))  # Smaller yellow graph
+plot_membership(waiting_time,"Waiting Time Membership")
+
+plot_membership(green_light_duration,"Green Light Duration Membership")
+
+plot_membership(red_light_duration,"Red Light Duration Membership")
+
+plot_membership(yellow_light_duration,"Yellow Light Duration Membership")

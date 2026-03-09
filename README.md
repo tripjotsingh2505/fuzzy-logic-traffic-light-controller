@@ -1,36 +1,172 @@
-# 🚦 Fuzzy Logic Traffic Light Controller
+# 🚦 Fuzzy Logic Based Traffic Light Controller
 
-## 📖 Project Overview
-This project implements a **Fuzzy Logic-based Traffic Light Controller** using Python and Streamlit. Unlike traditional fixed-timer signals, this system dynamically calculates **Green, Red, and Yellow durations** based on real-time traffic inputs, reducing congestion and wait times.
+A **smart traffic signal controller** built using **Fuzzy Logic** that dynamically adjusts traffic signal durations based on **traffic density** and **vehicle waiting time**.
 
-It handles traffic uncertainty using:
+This project demonstrates how **fuzzy inference systems** can be used to manage uncertain real-world conditions such as road traffic.
 
-- **Traffic Density** (0–100%): Vehicles present on the road.  
-- **Waiting Time** (0–100s): Duration vehicles have been waiting at the signal.  
+The system is implemented using **Python, Streamlit, and scikit-fuzzy**, and provides an interactive dashboard where users can simulate traffic scenarios.
 
 ---
 
-## ✨ Key Features
-- **Dynamic Signal Calculation:** Real-time adaptation of traffic light timings.  
-- **Interactive Dashboard:** Modern UI with gradient styling and live sliders.  
-- **Instant Output Cards:** Shows calculated durations for each light.  
-- **Fuzzy Membership Visualization:** Professional graphs for "Low", "Medium", "High" traffic levels.  
-- **Visual Feedback:** Real-time traffic light simulation on the dashboard.  
+# 📊 Project Overview
+
+Traditional traffic lights operate on **fixed timing**, which often leads to:
+
+* unnecessary waiting
+* traffic congestion
+* inefficient traffic flow
+
+This project introduces a **Fuzzy Logic Controller** that adapts signal timing dynamically based on real-time inputs.
+
+### Inputs
+
+* **Traffic Density** (0 – 100)
+* **Waiting Time** (0 – 100)
+
+### Outputs
+
+* **Green Light Duration**
+* **Red Light Duration**
+* **Yellow Light Duration**
+
+The fuzzy system processes these inputs using **membership functions and rules** to determine optimal signal timings.
 
 ---
 
-## 🛠 Technology Stack
-- **Python 3.13.5**  
-- **Streamlit** – Web interface  
-- **scikit-fuzzy** – Fuzzy logic engine  
-- **Matplotlib** – Graph plotting  
-- **NumPy** – Numerical computations  
+# ⚙️ Features
+
+✔ Interactive **Streamlit Dashboard**
+✔ Adjustable **Traffic Density & Waiting Time sliders**
+✔ Real-time **signal duration calculation**
+✔ Visual **Traffic Signal representation**
+✔ **Fuzzy Membership Function graphs**
+✔ Clean and professional **UI dashboard**
 
 ---
 
-## 🚀 Installation & Setup (VS Code Terminal)
+# 🧠 Fuzzy Logic System
 
-1. **Clone the repository:**
-```bash
-git clone https://github.com/tripjotsingh2505/fuzzy-logic-traffic-light-controller.git
-cd fuzzy-logic-traffic-light-controller
+The system uses **fuzzy inference rules** to determine signal timings.
+
+### Membership Sets
+
+**Traffic Density**
+
+* Low
+* Medium
+* High
+
+**Waiting Time**
+
+* Short
+* Medium
+* Long
+
+**Signal Durations**
+
+* Short
+* Medium
+* Long
+
+The fuzzy controller evaluates these inputs and determines the most appropriate signal timing.
+
+---
+
+# 🛠️ Technology Stack
+
+* **Python**
+* **Streamlit**
+* **NumPy**
+* **scikit-fuzzy**
+* **Matplotlib**
+
+---
+
+# 📁 Project Structure
+
+```
+fuzzy-traffic-light-controller
+│
+├── app.py
+├── requirements.txt
+├── README.md
+└── assets (optional screenshots)
+```
+
+---
+
+# 💻 Installation
+
+Clone the repository:
+
+```
+git clone https://github.com/tripjotsingh2505/fuzzy-traffic-light-controller.git
+cd fuzzy-traffic-light-controller
+```
+
+Install dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+Run the application:
+
+```
+streamlit run app.py
+```
+
+---
+
+# 🌐 Deployment
+
+This project can be easily deployed using:
+
+* **Streamlit Community Cloud**
+* **Render** - I Personally used Render.
+* **Heroku**
+
+Recommended platform: **Streamlit Cloud**.
+
+Steps:
+
+1. Push the project to GitHub
+2. Connect the repository to Streamlit Cloud
+3. Deploy `app.py`
+
+---
+
+# 📷 Dashboard Preview
+```
+![Dashboard Screenshot](dashboard.png)
+```
+
+---
+
+# 🎯 Learning Outcomes
+
+This project demonstrates:
+
+* Practical implementation of **Fuzzy Logic Systems**
+* Building **interactive dashboards using Streamlit**
+* Visualizing **membership functions**
+* Creating **deployable data science applications**
+
+---
+
+# 👨‍💻 Author
+
+**Tripjot Singh**
+
+Data Analytics & Data Science & ML Enthusiast
+
+GitHub:
+https://github.com/tripjotsingh2505
+
+---
+
+# 📜 License
+
+This project is created for **educational and learning purposes**.
+
+Feel free to use and modify it.

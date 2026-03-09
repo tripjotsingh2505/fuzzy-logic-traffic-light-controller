@@ -8,6 +8,14 @@ The system is implemented using **Python, Streamlit, and scikit-fuzzy**, and pro
 
 ---
 
+# 🚀 Live Demo
+
+Click below to open the deployed application:
+
+🔗 **[Open Live Dashboard](https://fuzzy-logic-traffic-light-controller.onrender.com/)**
+
+---
+
 # 📊 Project Overview
 
 Traditional traffic lights operate on **fixed timing**, which often leads to:
@@ -90,7 +98,7 @@ fuzzy-traffic-light-controller
 ├── app.py
 ├── requirements.txt
 ├── README.md
-└── assets (optional screenshots)
+├── dashboard.png
 ```
 
 ---
@@ -123,10 +131,10 @@ streamlit run app.py
 This project can be easily deployed using:
 
 * **Streamlit Community Cloud**
-* **Render** - I Personally used Render.
+* **Render** *(I personally used Render)*
 * **Heroku**
 
-Recommended platform: **Streamlit Cloud**.
+Recommended platform: **Streamlit Cloud**
 
 Steps:
 
@@ -137,9 +145,8 @@ Steps:
 ---
 
 # 📷 Dashboard Preview
-```
+
 ![Dashboard Screenshot](dashboard.png)
-```
 
 ---
 
@@ -158,7 +165,7 @@ This project demonstrates:
 
 **Tripjot Singh**
 
-Data Analytics & Data Science & ML Enthusiast
+Data Analytics | Data Science | Machine Learning Enthusiast
 
 GitHub:
 https://github.com/tripjotsingh2505
